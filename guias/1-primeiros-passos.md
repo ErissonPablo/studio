@@ -13,7 +13,7 @@ Este tutorial leva você do zero até a primeira edição. Leva uns 20 minutos, 
 | **Python** 3.10 ou mais novo | transcrição e skill `watch` | sim |
 | **FFmpeg** | lê e converte vídeo | sim |
 | **Git** | baixar e atualizar este repositório | recomendado |
-| Conta **Higgsfield** com créditos | só para o Nível 2 | não |
+| Conta **Magnific** (Premium ou superior) com créditos | só para o Nível 2 | não |
 
 Você pode usar o Claude de três jeitos. Todos funcionam com este repositório:
 
@@ -60,7 +60,7 @@ brew install node python ffmpeg yt-dlp git
 Abra uma sessão **Code** no Claude e cole:
 
 ```text
-Instala o repositório https://github.com/mackswendhell/studio na pasta C:\dev (siga a seção "Instalação" do README).
+Instala o repositório https://github.com/ErissonPablo/studio na pasta C:\dev (siga a seção "Instalação" do README).
 ```
 
 Ele clona, instala as dependências e as duas skills gratuitas (**remotion-best-practices** e **watch**). Quando terminar, **abra uma sessão nova** do Claude dentro da pasta `studio`: skills novas só aparecem numa sessão nova.
@@ -71,7 +71,7 @@ Escolha uma pasta **fora** do OneDrive, iCloud ou Dropbox (a sincronização atr
 
 ```bash
 cd C:\dev
-git clone https://github.com/mackswendhell/studio.git
+git clone https://github.com/ErissonPablo/studio.git
 cd studio
 npm run instalar
 ```
@@ -109,9 +109,9 @@ A `watch` pode usar a Groq para transcrever rápido. É grátis dentro de um lim
 
 Sem essa chave tudo funciona igual: o `tools/transcrever.py` transcreve localmente, de graça.
 
-## 6. (Só para o Nível 2) Conectar a Higgsfield
+## 6. (Só para o Nível 2) Conectar a Magnific
 
-Siga a seção [Conectar a Higgsfield ao Claude](4-nivel-2-higgsfield.md#1-conectar-a-higgsfield-ao-claude). Resumo: no Claude Desktop, **Configurações → Conectores → Adicionar conector personalizado**, URL `https://mcp.higgsfield.ai/mcp`, e login na sua conta.
+Siga a seção [Conectar a Magnific ao Claude](4-nivel-2-magnific.md#1-conectar-a-magnific-ao-claude). Resumo: no Claude Desktop, **Personalizar → Conectores → Adicionar conector personalizado**, URL `https://mcp.magnific.com`, e login na sua conta.
 
 ---
 
@@ -130,9 +130,8 @@ studio/
 │     ├─ prints/       prints e imagens do que você quer ver animado
 │     ├─ frames/       (gerado) quadros que o Claude "assistiu"
 │     ├─ transcricao/  (gerado) texto com o tempo de cada palavra
-│     ├─ hf/           (Nível 2) imagens e vídeos gerados na Higgsfield
-│     ├─ plano.md      (gerado) o plano de edição que você aprova
-│     └─ edit.jsx      (Nível 2) roteiro de montagem no Higgsedit
+│     ├─ magnific/     (Nível 2) imagens e vídeos gerados na Magnific
+│     └─ plano.md      (gerado) o plano de edição que você aprova
 │
 ├─ edicoes/            ← AQUI SAI o vídeo pronto
 │  └─ 001. meu-video/
@@ -142,7 +141,7 @@ studio/
 │  ├─ videos/          uma subpasta por vídeo seu
 │  ├─ estilos/         código dos exemplos da galeria
 │  └─ _shared/         peças reaproveitadas
-├─ tools/              transcrição local e gerador da Higgsfield Cloud API
+├─ tools/              transcrição local e gerador da API da Magnific
 └─ scripts/            verificações automáticas
 ```
 
@@ -180,5 +179,5 @@ Não sabe o que pedir? Pergunte ao próprio Claude: "o que dá para fazer com es
 | **Gatilho** | a palavra falada que faz uma inserção aparecer |
 | **Render** | gerar o arquivo de vídeo final |
 | **Still** | um quadro parado exportado como imagem, usado para revisão |
-| **MCP** | o "cabo" que conecta o Claude a um serviço externo, como a Higgsfield |
+| **MCP** | o "cabo" que conecta o Claude a um serviço externo, como a Magnific |
 | **Skill** | um pacote de instruções que ensina o Claude a fazer uma tarefa |

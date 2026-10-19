@@ -69,7 +69,7 @@ Perguntas úteis:
 - Ênfase: punch-in até ~1,12 em 2–3 s.
 - Limite do pan: `|deslocamento| ≤ largura × (escala − 1) / 2`, senão aparece borda preta.
 
-**Mudança de layout** (entrar numa `aula`, card da `demo` trocando de canto): **0,9–1,2 s**, curva suave sem "quique" (`Easing.inOut(Easing.cubic)` no Remotion, `bezier(0.65, 0, 0.35, 1)` no Higgsedit). Câmera e painel se movem **juntos**, com a mesma curva e a mesma janela de tempo. Pode começar alguns quadros antes da palavra para estar pronto nela, mas o conteúdo nunca aparece antes de ser dito.
+**Mudança de layout** (entrar numa `aula`, card da `demo` trocando de canto): **0,9–1,2 s**, curva suave sem "quique" (`Easing.inOut(Easing.cubic)` no Remotion). Câmera e painel se movem **juntos**, com a mesma curva e a mesma janela de tempo. Pode começar alguns quadros antes da palavra para estar pronto nela, mas o conteúdo nunca aparece antes de ser dito.
 
 **Vozes de transição** (misture para não ficar previsível):
 

@@ -1,6 +1,6 @@
 # 003. jev-nao-e-hype: plano de edição
 
-> **Exemplo real** de um plano do Nível 2 (Higgsfield), mantido aqui como modelo. Um plano do Nível 1 segue a mesma lógica, mas sem a tabela de créditos: tudo é desenhado no Remotion.
+> **Exemplo real** de um plano do Nível 2, mantido aqui como modelo. Ele foi feito no projeto original com a Higgsfield: os nomes de modelos, os custos e a montagem no Higgsedit não valem para a Magnific. Neste fork, os custos vêm do `simulate_cost` e a montagem é no Remotion. Um plano do Nível 1 segue a mesma lógica, mas sem a tabela de créditos: tudo é desenhado no Remotion.
 
 ## Fonte
 

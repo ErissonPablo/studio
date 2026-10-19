@@ -11,16 +11,16 @@ Na primeira resposta da sessão, antes de qualquer outra coisa (a menos que a pe
 1. Cumprimente em uma linha e pergunte **em qual nível ela quer editar**. Use a ferramenta de pergunta com opções (`AskUserQuestion`) se estiver disponível; senão, pergunte em texto:
 
    - **Nível 1: gratuito, com Remotion.** Eu assisto o seu vídeo (skill `watch`), transcrevo com o tempo exato de cada palavra, monto um plano de edição para você aprovar e programo as animações no Remotion: textos, prints com zoom e marca-texto, tela dividida, gráficos, legendas. Tudo roda no seu computador, sem custo. Dica: o resultado fica bem melhor se você tirar **prints** do que quer ver animado e salvar em `prints/`.
-   - **Nível 2: avançado, com Higgsfield.** Tudo do Nível 1, mais imagens e vídeos gerados por IA (B-rolls cinematográficos, ilustrações animadas, metáforas visuais) e montagem no editor da Higgsfield. Usa créditos da sua conta Higgsfield e precisa do conector conectado. Nada é gasto sem você aprovar o custo.
+   - **Nível 2: avançado, com a Magnific.** Tudo do Nível 1, mais imagens e vídeos gerados por IA na Magnific (B-rolls cinematográficos, ilustrações animadas, metáforas visuais). A montagem continua no Remotion, no seu computador. Usa créditos da sua conta Magnific (plano Premium ou superior) e precisa do conector conectado. Nada é gasto sem você aprovar o custo.
 
 2. Depois da escolha, **leia os guias do nível** antes de agir:
    - Nível 1 → [guias/2-nivel-1-remotion.md](guias/2-nivel-1-remotion.md) e [guias/5-direcao-editorial.md](guias/5-direcao-editorial.md).
-   - Nível 2 → [guias/4-nivel-2-higgsfield.md](guias/4-nivel-2-higgsfield.md) e [guias/5-direcao-editorial.md](guias/5-direcao-editorial.md). No caminho B (API key), leia também o guia do Nível 1, porque a montagem é no Remotion.
+   - Nível 2 → [guias/4-nivel-2-magnific.md](guias/4-nivel-2-magnific.md), [guias/2-nivel-1-remotion.md](guias/2-nivel-1-remotion.md) (a montagem é no Remotion nos dois caminhos) e [guias/5-direcao-editorial.md](guias/5-direcao-editorial.md).
 
 3. **Confira os pré-requisitos em silêncio** e resolva o que faltar:
    - `node_modules/` existe, `python -c "import faster_whisper"` funciona e as skills `watch` e `remotion-best-practices` estão disponíveis. Se qualquer um faltar, **instale você mesmo** rodando `npm run instalar` (instala tudo isso de uma vez) e avise que as skills novas só aparecem numa **sessão nova**: peça para a pessoa reabrir o Claude nesta pasta;
    - `ffmpeg`, `ffprobe`, `node` e `python` respondem. Se faltarem, instale com `winget` (Windows) ou `brew` (Mac), conforme [guias/1-primeiros-passos.md](guias/1-primeiros-passos.md);
-   - Nível 2: as ferramentas da Higgsfield respondem (chame `balance`). Se não houver conector, explique os dois caminhos de conexão do guia (A: entrar com a conta, recomendado; B: API key da Higgsfield Cloud via `tools/hf_api.py`, sem Higgsedit). No caminho B, confirme que a variável `HF_KEY` (ou `HF_API_KEY` + `HF_API_SECRET`) existe, **sem imprimir o valor**.
+   - Nível 2: as ferramentas da Magnific respondem (chame `account_balance`). Se não houver conector, explique os dois caminhos de conexão do guia (A: entrar com a conta, recomendado; B: API key da Magnific via `tools/magnific_api.py`, sem estimativa de custo pelo conector). No caminho B, confirme que a variável `MAGNIFIC_API_KEY` existe, **sem imprimir o valor**. Se o plano for Free ou não houver créditos, diga que gerar exige o Premium ou superior e ofereça o Nível 1.
 
 4. Liste os projetos em `projetos/` e pergunte qual editar. Se não houver nenhum, ensine a criar: `projetos/001. nome/video/` com o vídeo e `prints/` com as imagens.
 
@@ -68,14 +68,14 @@ Depois de assistir o vídeo, **proponha você mesmo** duas ou três direções (
 CLAUDE.md                 este arquivo
 guias/                    1 primeiros passos · 2 nível 1 · 3 manual do Remotion · 4 nível 2 · 5 direção editorial
 estilos/                  galeria de estilos (README.md + imagens/)
-projetos/<NNN. slug>/     video/ · prints/ · frames/ · transcricao/ · hf/ · plano.md · edit.jsx
+projetos/<NNN. slug>/     video/ · prints/ · frames/ · transcricao/ · magnific/ · plano.md
 edicoes/<NNN. slug>/      somente entregáveis finais
 src/Root.tsx              registro das composições do Remotion
-src/videos/<slug>/        código de cada vídeo (Nível 1 e Nível 2 caminho B)
+src/videos/<slug>/        código de cada vídeo (Níveis 1 e 2)
 src/estilos/              exemplos da galeria, rodam sem vídeo
 src/_shared/              primitivas: synchronized-split.tsx (obrigatória em telas divididas), metadata.ts
 tools/transcrever.py      transcrição local com tempo por palavra (faster-whisper, gratuito)
-tools/hf_api.py           geração pela Higgsfield Cloud API (Nível 2, caminho B)
+tools/magnific_api.py     geração pela API da Magnific (Nível 2, caminho B)
 ```
 
 - Numeração: `NNN. slug`, três dígitos, igual em `projetos/` e `edicoes/`. Novo projeto = maior número + 1. O prefixo numérico não entra no slug de `src/videos/` nem nos ids de composição.

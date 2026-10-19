@@ -2,7 +2,7 @@
   "name": "studio",
   "version": "1.0.0",
   "private": true,
-  "description": "Estúdio de edição de vídeo com Claude Code: Nível 1 (Remotion, gratuito) e Nível 2 (Higgsfield).",
+  "description": "Estúdio de edição de vídeo com Claude Code: Nível 1 (Remotion, gratuito) e Nível 2 (Magnific).",
   "scripts": {
     "instalar": "node scripts/instalar.mjs",
     "studio": "remotion studio src/index.ts",

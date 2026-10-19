@@ -39,7 +39,9 @@ Quadros reais de vídeos editados com este fluxo no canal **Macks Wendhell | Int
 | ![Manuscrito colorido](imagens/manuscrito-colorido.jpg) | ![Dossiê com marca-texto](imagens/dossie-marca-texto.jpg) |
 | **Manuscrito colorido.** Elementos sobre a câmera cheia, números em blocos coloridos e anotações à mão. | **Dossiê com marca-texto.** Documento de papel, lupa, marca-texto amarelo e um mascote desenhado. |
 
-## Do projeto original: Nível 2 (Higgsfield)
+## Do projeto original: Nível 2
+
+Feitos com a Higgsfield no projeto original. Neste fork, o Nível 2 gera o mesmo tipo de imagem na Magnific, com os prompts do [guia do Nível 2](../guias/4-nivel-2-magnific.md#6-estilos-e-prompts-base).
 
 | | |
 |---|---|
